@@ -30,7 +30,7 @@ class CreatePostView(CreateView, LoginRequiredMixin):
 
     model = Post
 
-class UpdatePostView(CreateView, LoginRequiredMixin):
+class UpdatePostView(UpdateView, LoginRequiredMixin):
     login_url = '/login/'
     redirect_field_name = 'blog_app/post_detail.html'
     form_class = PostForm
