@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'', include('blog_app.urls'))
+    re_path(r'', include('blog_app.urls')),
+    re_path(r'accounts/login/$', LoginView.as_view(), name='login'),
+    re_path(r'accounts/logout/$', LogoutView.as_view(), name='logout'),
 ]
