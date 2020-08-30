@@ -1,26 +1,28 @@
 from django import forms
 from blog_app.models import Post, Comment
 
+
 class PostForm(forms.ModelForm):
 
-    class Meta():
+    class Meta:
         model = Post
-        fields = ('author','title', 'text')
+        fields = ('author', 'title', 'text')
 
         widgets = {
             # link fields to css class names
-            'title':forms.TextInput(attrs={'class':'textinputclass'}),
-            'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'})
+            'title': forms.TextInput(attrs={'class': 'text-input'}),
+            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea post-content'})
         }
+
 
 class CommentForm(forms.ModelForm):
 
-    class Meta():
+    class Meta:
         model = Comment
         fields = ('author', 'text')
 
         widgets = {
             # link fields to css class names.
-            'author':forms.TextInput(attrs={'class':'textinputclass'}),
-            'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea'})
+            'author': forms.TextInput(attrs={'class': 'text-input'}),
+            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea'})
         }
