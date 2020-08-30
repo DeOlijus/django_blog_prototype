@@ -49,11 +49,11 @@ class DeletePostView(DeleteView, LoginRequiredMixin):
 
 class DraftListView(ListView, LoginRequiredMixin):
     login_url = '/login/'
-    redirect_field_name = 'blog_app/post_list.html'
+    template_name = 'blog_app/post_draft_list.html'
     model = Post
 
     def get_queryset(self):
-        return Post.objects.filter(published_date__isnull=True).order_by('create_date')
+        return Post.objects.filter(published_date__isnull=True).order_by('created_date')
 
 
 @login_required
