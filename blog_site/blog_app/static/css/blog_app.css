@@ -1,0 +1,60 @@
+.custom-navbar{
+    font-family: 'Spartan', sans-serif;
+    margin-bottom: 10px;
+
+}
+
+
+.custom-brand{
+    font-size: 2em;
+}
+
+
+.post-date{
+    text-align: left;
+}
+
+
+.post-title>a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #678fcf;
+}
+
+
+.post-title>p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #678fcf;
+}
+
+
+.post-content{
+    font-family: 'Roboto';
+    font-size: 1.5em;
+}
+
+
+.btn-comment{
+    position: absolute;
+    right: 0px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+/*COLOR CHANGER*/
+/*Credit and Source: http://codepen.io/thapliyalshivam/pen/dvgXVO*/
+.loader{
+    filter:hue-rotate(0deg);
+    color: linear-gradient(45deg,#0f8,#08f);
+    animation:hue 2500ms infinite linear;
+}
+
+@keyframes hue{
+    0%{filter: hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);}
+
+}
+
+
